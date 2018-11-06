@@ -5,24 +5,24 @@ import styles from './globalNavigation.module.css';
 
 import NavigationItem from '../../componentsProps/ItemNavigation';
 
-const GlobalNavigation = (props) => {
+const GlobalNavigation = ({title, currentUrl, globalNavigationItems}) => {
     return (
         <div className={styles.divContainer}>
         <div className={styles.marginDiv}>
-            <span className= {`ms-Icon ms-Icon--Family ${styles.menuIcon}`} title={props.props.name}></span>
+            <span className= {`ms-Icon ms-Icon--Family ${styles.menuIcon}`} title={title}></span>
         </div>
         <ul className={styles.navigationBar}>
-            {props.props.globalNavigationItems.map((i)=>{
-                if(props.props.currentUrl === i.url){
+            {Object.keys(globalNavigationItems).map(key=> {
+                if(currentUrl === globalNavigationItems[key].url){
                     return(
-                        <li className={styles.navigationItemSelected}>
-                            <span>{i.name}</span>
+                        <li className={styles.navigationItemSelected} key={key}>
+                            <span>{globalNavigationItems[key].name}</span>
                         </li>
                     );
                 }else{
                     return(
-                        <li className={styles.navigationItem}>
-                            <a className={styles.navigationItem} href={i.url}>{i.name}</a>
+                        <li className={styles.navigationItem} key={key}>
+                            <a className={styles.navigationItem} href={globalNavigationItems[key].url}>{globalNavigationItems[key].name}</a>
                         </li>   
                     );
                 }
@@ -33,7 +33,13 @@ const GlobalNavigation = (props) => {
 }
 
 GlobalNavigation.propTypes = {
+    /** Title of Global Navigation */
     title: PropTypes.string,
+
+    /** Current Url Global Navigation */
+    currentUrl: PropTypes.string,
+    
+    /** Global Navigation Items*/
     globalNavigationItems: PropTypes.arrayOf(NavigationItem)
 }
 

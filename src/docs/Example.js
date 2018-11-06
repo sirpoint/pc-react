@@ -26,11 +26,11 @@ class Example extends React.Component {
 
         <ExampleComponent />
 
-        <p>
+        <div className = "showCode">
           <a href="" onClick={this.toggleCode}>
             {showCode ? "Hide" : "Show"} Code
           </a>
-        </p>
+        </div>
 
         {showCode && <CodeExample>{code}</CodeExample>}
       </div>
