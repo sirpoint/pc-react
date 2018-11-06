@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './globalNavigation.css';
+import styles from './globalNavigation.module.css';
+// import styled from 'styled-components';
 
-const GlobalNavigation = ({globalNavProps}) => {
+import NavigationItem from '../../componentsProps/ItemNavigation';
+
+const GlobalNavigation = (props) => {
     return (
         <div className={styles.divContainer}>
         <div className={styles.marginDiv}>
-            <span className= {`ms-Icon ms-Icon--Family ${styles.menuIcon}`} title="Global Navigation Menu"></span>
+            <span className= {`ms-Icon ms-Icon--Family ${styles.menuIcon}`} title={props.props.name}></span>
         </div>
         <ul className={styles.navigationBar}>
-            {this.props.globalNavigationItems.map((i)=>{
-                if(this.props.currentUrl === i.url){
+            {props.props.globalNavigationItems.map((i)=>{
+                if(props.props.currentUrl === i.url){
                     return(
                         <li className={styles.navigationItemSelected}>
                             <span>{i.name}</span>
@@ -30,7 +33,8 @@ const GlobalNavigation = ({globalNavProps}) => {
 }
 
 GlobalNavigation.propTypes = {
-    globalNavigationItems: PropTypes.array
+    title: PropTypes.string,
+    globalNavigationItems: PropTypes.arrayOf(NavigationItem)
 }
 
 
