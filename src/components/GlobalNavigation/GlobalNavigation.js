@@ -40,7 +40,7 @@ GlobalNavigation.propTypes = {
     currentUrl: PropTypes.string,
     
     /** Global Navigation Items*/
-    globalNavigationItems: PropTypes.arrayOf(NavigationItem)
+    globalNavigationItems: PropTypes.array
 }
 
 

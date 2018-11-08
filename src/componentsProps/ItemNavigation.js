@@ -5,13 +5,15 @@ const NavigationItem = {
     description: "",
     url:"",
     target: "",
+    className: "",
 }
 
 NavigationItem.propTypes = {
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     description: PropTypes.string,
-    url: PropTypes.string,
+    url: PropTypes.string.isRequired,
     target: PropTypes.string,
+    className: PropTypes.string,
 }
 
 

@@ -9,19 +9,22 @@ export default function ExampleHelloWorld() {
             "name": "News",
             "url": "https://sirpointdevs.sharepoint.com/sites/news",
             "description": "Corporate Company News Portal",
-            "target": ""
+            "target": "",
+            "className" : ""
         },
         {
             "name": "Human Resources",
             "url": "https://sirpointdevs.sharepoint.com/sites/hr",
             "description": "Human Resources Portal",
-            "target": ""
+            "target": "",
+            "className" : ""
         },
         {
             "name": "Learning",
             "url": "https://sirpointdevs.sharepoint.com/sites/learning",
             "description": "Learning Portal",
-            "target": ""
+            "target": "",
+            "className" : ""
         }
     ] 
     
