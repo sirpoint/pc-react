@@ -31,5 +31,5 @@ export default function ExampleShortcuts() {
         }
     ] 
     
-    return <Shortcuts shortcutItems = {shorCuts} />
+    return <Shortcuts alignment = "right" shortcutItems = {shorCuts} />
 }

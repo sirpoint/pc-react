@@ -1,8 +1,18 @@
-@import 'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/6.0.0/css/fabric-6.0.0.scoped.css'
+
+.center{
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
 
 .toolBarContainer{
     list-style-type: none;
-    text-align: right;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -13,6 +23,7 @@
 
 .toolBarItem{
     display: inline-block;
+    padding-left: 7px;
 }
 
 .toolBarItem a{
